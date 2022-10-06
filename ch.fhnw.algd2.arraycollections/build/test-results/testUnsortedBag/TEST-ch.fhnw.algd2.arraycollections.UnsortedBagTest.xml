@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.UnsortedBagTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2022-09-29T21:02:27" hostname="DESKTOP-GT1GTT7" time="0.104">
+  <properties/>
+  <testcase name="testLinearSearch" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.002"/>
+  <testcase name="removesOnlyOneInstance" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="containsNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="removeLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="removeNonExisting" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addDuplicates" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="containsLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="removeHasNoMemoryLeak" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.093"/>
+  <testcase name="addUnsortedNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="testEmptyCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="notExistingElementInFullCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="removeElement" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="removeElementFromFullList" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addMoreThanCapacity" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="containsWithEquals" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="addSingleNull" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <testcase name="containsOtherObject" classname="ch.fhnw.algd2.arraycollections.UnsortedBagTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

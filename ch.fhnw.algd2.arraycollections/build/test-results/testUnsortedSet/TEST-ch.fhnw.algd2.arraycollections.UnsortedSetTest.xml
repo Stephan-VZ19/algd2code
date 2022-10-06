@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd2.arraycollections.UnsortedSetTest" tests="19" skipped="0" failures="1" errors="0" timestamp="2022-09-30T08:52:41" hostname="LAPTOP-LSE1D2I7" time="0.276">
+  <properties/>
+  <testcase name="testLinearSearch" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.004"/>
+  <testcase name="addExistingElementToFullSet" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.003">
+    <failure message="java.lang.IllegalStateException: Collection is full" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Collection is full
+	at ch.fhnw.algd2.arraycollections.UnsortedSet.add(UnsortedSet.java:33)
+	at ch.fhnw.algd2.arraycollections.general.AbstractSetTest.addExistingElementToFullSet(AbstractSetTest.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+</failure>
+  </testcase>
+  <testcase name="containsNull" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <testcase name="removeLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="removeNonExisting" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="addNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <testcase name="addDuplicates" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="containsLastElement" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="addNull" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="removeHasNoMemoryLeak" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.239"/>
+  <testcase name="addUnsortedNumberSequence" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="testEmptyCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="notExistingElementInFullCollection" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <testcase name="removeElement" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="removeElementFromFullList" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <testcase name="addMoreThanCapacity" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <testcase name="containsWithEquals" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="addSingleNull" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.001"/>
+  <testcase name="containsOtherObject" classname="ch.fhnw.algd2.arraycollections.UnsortedSetTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
