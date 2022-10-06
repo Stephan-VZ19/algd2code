@@ -1,6 +1,7 @@
 package ch.fhnw.algd2.collections.list.linkedlist;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 import ch.fhnw.algd2.collections.list.MyAbstractList;
 
@@ -50,7 +51,18 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	@Override
 	public E remove(int index) {
 		// TODO implement this operation (part D)
-		throw new UnsupportedOperationException();
+
+		Object tempObject = new Object();
+
+		int i = 0;
+		Iterator<E> iter = (Iterator<E>) this.iterator();
+		while (i < index) {
+			tempObject = iter.next();
+			i++;
+		}
+
+		size--;
+		return (E)tempObject;
 	}
 
 	@Override
