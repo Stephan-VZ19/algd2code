@@ -79,12 +79,16 @@ public class SinglyLinkedList<E> extends MyAbstractList<E> {
 	private class MyIterator implements Iterator<E> {
 		@Override
 		public boolean hasNext() {
-			throw new UnsupportedOperationException();
+			// week 3
+			return next() != null;
 		}
 
 		@Override
 		public E next() {
-			throw new UnsupportedOperationException();
+			// week 3
+
+
+			return 
 		}
 
 		@Override
