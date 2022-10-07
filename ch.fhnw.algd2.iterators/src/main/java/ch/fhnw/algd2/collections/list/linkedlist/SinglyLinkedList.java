@@ -77,18 +77,22 @@ public class SinglyLinkedList<E> extends MyAbstractList<E> {
 	}
 
 	private class MyIterator implements Iterator<E> {
+
+		private Node<E> nnode = first;	// Node to work with
+
 		@Override
 		public boolean hasNext() {
 			// week 3
-			return next() != null;
+			return nnode != null;
 		}
 
 		@Override
 		public E next() {
 			// week 3
-
-
-			return 
+			if (nnode == null) throw new NullPointerException();
+			E elem = nnode.elem;
+			nnode = nnode.next;
+			return elem;
 		}
 
 		@Override
