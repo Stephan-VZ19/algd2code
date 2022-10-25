@@ -14,12 +14,8 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 		// TODO implement this operation (part A)
 
 		Node<E> addNode = new Node<E>(e, null);
-		Node<E> iterNode;
-		iterNode = first;
-		for (int i=1; i<size;i++) {
-			iterNode.next = iterNode;
-		}
-		iterNode.next = addNode;
+		addNode.next = first;
+		first = addNode;
 		size++;
 		return true;
 	}
@@ -27,7 +23,19 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	@Override
 	public boolean contains(Object o) {
 		// TODO implement this operation (part B)
-		throw new UnsupportedOperationException();
+
+		Node<E> node = new Node<>((E)o, null);
+
+		node.next = first;
+		boolean found = false;
+
+		while (!found && node.next != null) {
+			if (node.next.elem.equals((E)o)) {
+				found = true;
+			}
+			node = node.next;
+		}
+		return found;
 	}
 
 	@Override
@@ -51,18 +59,8 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	@Override
 	public E remove(int index) {
 		// TODO implement this operation (part D)
+		throw new UnsupportedOperationException();
 
-		Object tempObject = new Object();
-
-		int i = 0;
-		Iterator<E> iter = (Iterator<E>) this.iterator();
-		while (i < index) {
-			tempObject = iter.next();
-			i++;
-		}
-
-		size--;
-		return (E)tempObject;
 	}
 
 	@Override
