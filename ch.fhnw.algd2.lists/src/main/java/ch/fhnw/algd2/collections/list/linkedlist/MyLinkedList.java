@@ -41,7 +41,26 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	@Override
 	public boolean remove(Object o) {
 		// TODO implement this operation (part C)
-		throw new UnsupportedOperationException();
+
+		Node<E> curr = new Node<>((E)o, null);
+		Node<E> prev = new Node<>((E)o, null);
+
+		curr.next = first;
+		prev.next = first;
+		boolean found = false;
+
+		while (!found && curr.next != null) {
+			if (curr.next.elem.equals((E)o)) {
+				found = true;
+				prev.next = curr.next;	// delete, skip current
+				curr.next = null;
+			} else {
+				prev = curr;
+				curr = curr.next;
+			}
+		}
+		return found;
+
 	}
 
 	@Override
