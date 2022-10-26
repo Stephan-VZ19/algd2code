@@ -50,24 +50,19 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	public boolean remove(Object o) {
 		// TODO implement this operation (part C)
 
-		Node<E> curr = new Node<>((E)o, null);
-		Node<E> prev = new Node<>((E)o, null);
+		Node<E> curr = first;
+		Node<E> prev = first;
 
-		curr.next = first;
-		prev.next = null;
-		boolean found = false;
-
-		while (!found && curr.next != null) {
-			if (curr.next.elem.equals((E)o)) {
-				found = true;
+		while (curr.next != null) {
+			if (curr.elem.equals((E)o)) {
 				prev.next = curr.next;	// delete, skip current
 				curr.next = null;
-			} else {
-				prev = curr;
-				curr = curr.next;
+				return curr.next == null;
 			}
+			prev = curr;
+			curr = curr.next;
 		}
-		return found;
+		return !(curr.next == null);
 
 	}
 
