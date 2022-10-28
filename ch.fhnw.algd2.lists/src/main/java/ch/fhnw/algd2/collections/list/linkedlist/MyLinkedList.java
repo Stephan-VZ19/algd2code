@@ -40,6 +40,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 		while (!found && node.next != null) {
 			if (node.next.elem.equals((E)o)) {
 				found = true;
+				size++;
 			}
 			node = node.next;
 		}
