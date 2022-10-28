@@ -40,7 +40,6 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 		while (!found && node.next != null) {
 			if (node.next.elem.equals((E)o)) {
 				found = true;
-				size++;
 			}
 			node = node.next;
 		}
@@ -54,10 +53,11 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 		Node<E> curr = first;
 		Node<E> prev = null;	// null, weil am Anfang es kein previous gibt
 
-		while (curr.next != null) {
+		while (size > 0 && curr.next != null) {
 			if (curr.elem.equals((E)o)) {
 				prev.next = curr.next;	// delete, skip current
 				curr.next = null;
+				size--;
 				return true;	// true, weil Liste geändert
 			}
 			prev = curr;
