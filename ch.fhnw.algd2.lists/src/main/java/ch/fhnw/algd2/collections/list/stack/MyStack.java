@@ -1,28 +1,47 @@
 package ch.fhnw.algd2.collections.list.stack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyStack<E> implements IStack<E> {
+
+	List<E> stackList = new ArrayList<>();
+
+	private E top;
+	private E root;
+
 	@Override
 	public E pop() {
 		// TODO implement this operation
-		throw new UnsupportedOperationException();
+
+		E tmp = stackList.get(stackList.size()-1);
+		stackList.remove(stackList.size()-1);
+		return tmp;
 	}
 
 	@Override
 	public E push(E elem) {
 		// TODO implement this operation
-		throw new UnsupportedOperationException();
+
+		stackList.add(elem);
+		return elem;
 	}
 
 	@Override
 	public E peek() {
 		// TODO implement this operation
-		throw new UnsupportedOperationException();
+
+		return stackList.get(stackList.size()-1);
 	}
 
 	@Override
 	public boolean empty() {
 		// TODO implement this operation
-		throw new UnsupportedOperationException();
+
+		if (stackList.size() > 0) {
+			return true;
+		}
+		return false;
 	}
 
 	public static void main(String[] args) {
