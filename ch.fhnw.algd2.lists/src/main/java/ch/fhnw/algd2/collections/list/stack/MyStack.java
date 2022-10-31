@@ -5,10 +5,7 @@ import java.util.List;
 
 public class MyStack<E> implements IStack<E> {
 
-	List<E> stackList = new ArrayList<>();
-
-	private E top;
-	private E root;
+	private List<E> stackList = new ArrayList<>();
 
 	@Override
 	public E pop() {
