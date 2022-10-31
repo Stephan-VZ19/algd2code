@@ -38,7 +38,7 @@ class BinarySearchTree<K extends Comparable<? super K>, E> implements Tree<K, E>
 	public boolean isEmpty() {
 		return root == null;
 	}
-
+	
 	/**
 	 * Insert a value into the tree; if an element is already stored under the
 	 * given key the element is replaced by the new one.
@@ -50,31 +50,22 @@ class BinarySearchTree<K extends Comparable<? super K>, E> implements Tree<K, E>
 	 */
 	@Override
 	public void insert(K key, E element) {
-		// TODO implement method insert here
-	    
-	    Node<K, E> next, current = root;
-	    if (root == null) {
-	        Node<K, E> node = new Node(key, element);
-	        root = node;
-	    } else {
-	        next = current.left;
-	        while (next != null) {
-	            if (next != null) {
-	                if (next.key.compareTo(key) == 0) {
-	                    next.element = element;
-	                    return;
-	                } else if (next.key.compareTo(key) < 0) {
-	                    current = next;
-	                    next = current.left;
-	                } else {
-	                    current = next;
-	                    next = current.right;
-	                }
-	                
-	            }
-	        }
-	    }
-	}
+        root = insert(root, key, element);
+    }
+	
+	private Node<K, E> insert(Node<K, E> p, K key, E element) {
+        if (p == null) {
+            nodeCount++;
+            return new Node<K, E>(key, element);
+        } else {
+            int c = key.compareTo(p.key);
+            if (c < 0) p.left = insert(p.left, key, element);
+            //else if (c > 0) p.right = insert(p.right, key, element);
+            //else p.element = element;
+            else p.right = insert(p.right, key, element);
+            return p;
+        }
+    }
 
 	/**
 	 * Searches an item in the tree.
