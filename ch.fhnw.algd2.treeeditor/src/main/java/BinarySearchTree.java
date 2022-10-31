@@ -52,10 +52,27 @@ class BinarySearchTree<K extends Comparable<? super K>, E> implements Tree<K, E>
 	public void insert(K key, E element) {
 		// TODO implement method insert here
 	    
-	    
+	    Node<K, E> next, current = root;
 	    if (root == null) {
 	        Node<K, E> node = new Node(key, element);
 	        root = node;
+	    } else {
+	        next = current.left;
+	        while (next != null) {
+	            if (next != null) {
+	                if (next.key.compareTo(key) == 0) {
+	                    next.element = element;
+	                    return;
+	                } else if (next.key.compareTo(key) < 0) {
+	                    current = next;
+	                    next = current.left;
+	                } else {
+	                    current = next;
+	                    next = current.right;
+	                }
+	                
+	            }
+	        }
 	    }
 	}
 
