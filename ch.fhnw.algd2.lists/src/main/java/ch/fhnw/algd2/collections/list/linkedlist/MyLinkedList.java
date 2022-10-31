@@ -55,7 +55,11 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 
 		while (size > 0 && curr.next != null) {
 			if (curr.elem.equals((E)o)) {
-				prev.next = curr.next;	// delete, skip current
+				if (prev != null) {
+					prev.next = curr.next;	// delete, skip current
+				} else {
+					first.next = curr.next;
+				}
 				curr.next = null;
 				size--;
 				return true;	// true, weil Liste geändert
