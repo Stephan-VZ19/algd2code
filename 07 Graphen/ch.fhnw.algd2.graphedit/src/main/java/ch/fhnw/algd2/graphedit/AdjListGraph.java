@@ -37,6 +37,12 @@ public final class AdjListGraph<K> extends AbstractGraph<K> {
 	public boolean addVertex(K vertex) {
 		if (vertex != null && !vertices.containsKey(vertex)) {
 			// TODO Einfuegen des neuen Knotens in HashMap
+
+			vertices.put(vertex, )
+
+
+
+
 			return true;
 		} else {
 			return false;
